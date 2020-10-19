@@ -2,6 +2,7 @@ package yzl.swu.customizedviewgroup
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.*
@@ -89,6 +90,9 @@ class FlowLayout : ViewGroup {
             //如果布局容器宽度模式确定   具体size或者match_parent
             //使用父视图建议高度
             layoutWidth = sizeWidth
+            Log.v("yzll","EXACTLY")
+        }else{
+            Log.v("yzll","${widthMode==MeasureSpec.AT_MOST}")
         }
 
         //高度

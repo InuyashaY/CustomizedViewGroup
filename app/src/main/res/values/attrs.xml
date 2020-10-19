@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyLinearLayout">
+        <attr name="iconResource" format="reference"/>
+        <attr name="menuTitle" format="string|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyTabBarItem">
+        <!--正常图片-->
+        <attr name="normalIcon" format="reference"/>
+        <!--选中图片-->
+        <attr name="selectedIcon" format="reference"/>
+        <!--标题-->
+        <attr name="titleText" format="string"/>
+        <!--高亮颜色-->
+        <attr name="highLightTextColor" format="color|reference"/>
+        <!--控制默认是否选中-->
+        <attr name="defaultSelected" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyTabBarController">
+        <attr name="itemNumber" format="integer"/>
+    </declare-styleable>
+</resources>
