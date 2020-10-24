@@ -1,4 +1,4 @@
-package yzl.swu.customizedviewgroup
+package yzl.swu.customizedviewgroup.commons
 
 import android.graphics.Color
 

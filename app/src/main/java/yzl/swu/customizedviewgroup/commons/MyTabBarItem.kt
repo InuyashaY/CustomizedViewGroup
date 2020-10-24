@@ -1,15 +1,14 @@
-package yzl.swu.customizedviewgroup
+package yzl.swu.customizedviewgroup.commons
 
 import android.content.Context
 import android.graphics.Color
 import android.util.AttributeSet
-import android.util.Log
 import android.view.Gravity
 import android.view.MotionEvent
-import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import yzl.swu.customizedviewgroup.R
 
 class MyTabBarItem: LinearLayout {
     //
@@ -52,10 +51,18 @@ class MyTabBarItem: LinearLayout {
     //解析属性
     private fun parseAttr(attrs: AttributeSet){
         //将此类定义的属性从attrs里面解析出来
-        val typedArray = context.obtainStyledAttributes(attrs,R.styleable.MyTabBarItem)
+        val typedArray = context.obtainStyledAttributes(attrs,
+            R.styleable.MyTabBarItem
+        )
         //解析每一个属性
-        normalIconId = typedArray.getResourceId(R.styleable.MyTabBarItem_normalIcon,R.drawable.bjx)
-        selectedIconId = typedArray.getResourceId(R.styleable.MyTabBarItem_selectedIcon,R.drawable.bjx)
+        normalIconId = typedArray.getResourceId(
+            R.styleable.MyTabBarItem_normalIcon,
+            R.drawable.bjx
+        )
+        selectedIconId = typedArray.getResourceId(
+            R.styleable.MyTabBarItem_selectedIcon,
+            R.drawable.bjx
+        )
         titleText = typedArray.getString(R.styleable.MyTabBarItem_titleText).toString()
         highlightColor = typedArray.getColor(R.styleable.MyTabBarItem_highLightTextColor,Color.BLACK)
         mSelected = typedArray.getBoolean(R.styleable.MyTabBarItem_defaultSelected,false)

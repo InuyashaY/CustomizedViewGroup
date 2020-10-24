@@ -21,4 +21,8 @@
     <declare-styleable name="MyTabBarController">
         <attr name="itemNumber" format="integer"/>
     </declare-styleable>
+
+    <declare-styleable name="MyViewGroup1">
+        <attr name="spanCount" format="integer"/>
+    </declare-styleable>
 </resources>

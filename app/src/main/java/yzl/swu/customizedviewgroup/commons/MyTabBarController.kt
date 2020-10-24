@@ -1,10 +1,11 @@
-package yzl.swu.customizedviewgroup
+package yzl.swu.customizedviewgroup.commons
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import yzl.swu.customizedviewgroup.R
 
 class MyTabBarController:LinearLayout {
     private var itemNumber:Int = 0
@@ -28,7 +29,9 @@ class MyTabBarController:LinearLayout {
     }
 
     private fun parseAttrs(attrs: AttributeSet) {
-        val typedArray = context.obtainStyledAttributes(attrs,R.styleable.MyTabBarController)
+        val typedArray = context.obtainStyledAttributes(attrs,
+            R.styleable.MyTabBarController
+        )
         itemNumber = typedArray.getInteger(R.styleable.MyTabBarController_itemNumber,1)
         typedArray.recycle()
     }
